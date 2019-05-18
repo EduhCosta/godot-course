@@ -18,6 +18,9 @@ func _ready():
 	
 	# Connection animation player
 	$AnimationPlayer.connect("animation_finished", self, "endAnimation")
+	
+	# Conect detroyer time
+	$destroy_timer.connect("timeout", self, "destroyer")
 	pass 
 
 func _on_areaInimigo_body_entered(body):
@@ -72,7 +75,6 @@ func changeSide(dir):
 	$Sprite.flip_h = dir
 	pass
 
-
 # Finish animation
 func endAnimation(anim):
 	if anim == "ataqueDireita" || anim == "ataqueEsquerda":
@@ -80,5 +82,27 @@ func endAnimation(anim):
 			$AnimationPlayer.play("paradoEsquerda")
 		else:
 			$AnimationPlayer.play("paradoDireita")
+	pass
+	
+func explodir():
+	$Tween.interpolate_property(
+		$Sprite, 
+		"modulate", 
+		Color(1, 1, 1, 1), 
+		Color(1, 1, 1, 0), 
+		.5, 
+		Tween.TRANS_BOUNCE, 
+		Tween.EASE_IN_OUT
+	)
+	$Tween.start()
+	$explodir.play()
+	
+	$Particles2D.emitting = true
+	
+	$destroy_timer.start()
+	pass
+	
+func destroyer():
+	queue_free()
 	pass
 	
