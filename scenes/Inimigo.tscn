@@ -266,6 +266,7 @@ anims/paradoEsquerda = SubResource( 5 )
 [node name="bocaInimigo" type="Area2D" parent="." groups=[
 "inimigo",
 ]]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bocaInimigo"]
 position = Vector2( -0.642555, -9.63841 )

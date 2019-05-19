@@ -45,3 +45,11 @@ margin_right = 40.1937
 margin_bottom = 30.1937
 custom_fonts/normal_font = ExtResource( 6 )
 text = "HP:"
+
+[node name="gold" type="RichTextLabel" parent="."]
+margin_left = 106.202
+margin_top = 29.6993
+margin_right = 236.202
+margin_bottom = 69.6993
+custom_fonts/normal_font = ExtResource( 6 )
+text = "Gold: 0"
