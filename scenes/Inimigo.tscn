@@ -239,7 +239,6 @@ flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 82.85
-angular_velocity = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
@@ -250,8 +249,9 @@ script = ExtResource( 1 )
 position = Vector2( 3.15661, 0.257023 )
 scale = Vector2( 0.933908, 1.01318 )
 texture = ExtResource( 2 )
+flip_h = true
 region_enabled = true
-region_rect = Rect2( 80.4837, 25.7782, 35.1126, 39.5017 )
+region_rect = Rect2( 196, 20, 62, 51 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 2.82726, 10.281 )
@@ -269,7 +269,7 @@ anims/paradoEsquerda = SubResource( 5 )
 editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bocaInimigo"]
-position = Vector2( -0.642555, -9.63841 )
+position = Vector2( 20.7868, -6.23284 )
 shape = SubResource( 6 )
 
 [node name="areaInimigo" type="Area2D" parent="."]

@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 # Signals
-signal openChest
+signal openedChest
 
 # Variables
 var canOpen = false
@@ -13,12 +13,12 @@ func _ready():
 	pass 
 
 func _process(delta):
-	if (canOpen):
+	if (canOpen && isOpened == false):
 		if (Input.is_action_just_pressed("open_chest")):
 			$AnimationPlayer.play("openFront")
 			isOpened = true
 			$openText.visible = false
-			emit_signal("openChest", randi()%150+100)
+			emit_signal("openedChest", randi()%150+100)
 	pass
 	
 func _on_open_chest_body_entered(body):

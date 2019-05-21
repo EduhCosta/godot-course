@@ -136,7 +136,7 @@ flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 21.58
-angular_velocity = 1.41531e-43
+angular_velocity = 1.41531e-043
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 color = Color( 0.698039, 0.054902, 0.054902, 1 )
@@ -152,7 +152,7 @@ region_enabled = true
 region_rect = Rect2( 4, 4, 19, 36 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2.08616e-07, 0.115982 )
+position = Vector2( 2.08616e-007, 0.115982 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -173,7 +173,6 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="areaDano" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="areaDano"]
 shape = SubResource( 6 )
@@ -181,7 +180,7 @@ shape = SubResource( 6 )
 [node name="areaBater" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="areaBater"]
-position = Vector2( 0.0944672, 12.5577 )
+position = Vector2( 0.0349312, 12.5577 )
 shape = SubResource( 7 )
 
 [node name="Particles2D" type="Particles2D" parent="."]

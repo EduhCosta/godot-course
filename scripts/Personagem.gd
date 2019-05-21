@@ -116,6 +116,9 @@ func tempoMorrer():
 
 # Colission with enemy
 func _on_areaDano_area_entered(area):
+	if area.is_in_group("cristal_a"):
+		emit_signal("aumentarScore", 150)
+		
 	if area.is_in_group("inimigo"):
 		if $tempo_invencivel.time_left == 0:
 			if colisorDano == false:

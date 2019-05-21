@@ -8,7 +8,8 @@ extends Node2D
 func _ready():
 	$Personagem.connect("levarDano", $guiCanvas/GUI, "damage")
 	$Personagem.connect("aumentarScore", $guiCanvas/GUI, "addScore")
-	$Chest.connect("openChest", $guiCanvas/GUI, "addGold")
+	$Chest.connect("openedChest", $guiCanvas/GUI, "addGold")
+	$Chest2.connect("openedChest", $guiCanvas/GUI, "addGold")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
